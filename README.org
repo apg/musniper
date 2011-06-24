@@ -1,0 +1,41 @@
+#+TITLE: MU Snipe - Snipe RSVPs for popular groups
+
+* Huh?
+[[http://www.meetup.com/][Meetup]] groups are sometimes very popular, and have very limited space
+for some of their meetups. This hack attempts to fix that by listening
+to the [[http://www.meetup.com/meetup_api/docs/stream/2/open_events/][open events]] streaming api and RSVPing for meetups of choosen
+groups. 
+
+There are two parts to this.
+
+** The sniper
+The sniper's job is to listen to the streaming API and make RSVP requests,
+on behalf of a user who has registered to auto RSVP for a group.
+
+By default (there's no custom configuration, so essentially, by mandate),
+the sniper listens for HTTP requests at http://localhost:9001. It supports
+3 different actions
+*** \/add\/<group_id>\/<meetup api key>
+As you might guess, this sets up a sniper for the group specified by
+the group_id, for the user associated to the <meetup api key>.
+*** \/del\/<group_id>\/<meetup api key>
+This endpoint removes the sniper that was created from the above.
+  * \/<group_id>
+This provides details as to how many snipers exist for this group.
+
+** The commander
+The commander listens on http://0.0.0.0:9000, and allows you to setup
+snipers. The application (and this whole hack in general) are pretty
+insecure and use "worst" practices. It should *not* be made public without
+a major overhaul.
+
+To use the commander, enter your [[http://www.meetup.com/meetup_api/key/][Meetup API key]]. Upon doing this, you will
+be presenting with a list of the Meetup groups you are currently apart of.
+Select the ones you want to snipe and press the 'Boom' button.
+
+* Requirements
+** [[http://eventlet.net/][Eventlet]]
+** My fork of [[https://github.com/apgwoz/itty][itty]], the Python micro framework.
+** Python with GDBM. (this is Unix only)
+
+
