@@ -39,3 +39,6 @@ Select the ones you want to snipe and press the 'Boom' button.
 *** Python with GDBM. (this is Unix only)
 
 
+** Running
+*** To run the sniper, ~python sniper.py~
+*** To run the commander, ~python commander.py~
