@@ -15,12 +15,12 @@ on behalf of a user who has registered to auto RSVP for a group.
 By default (there's no custom configuration, so essentially, by mandate),
 the sniper listens for HTTP requests at http://localhost:9001. It supports
 3 different actions
-*** \/add\/<group_id>\/<meetup api key>
+*** ~/add/<group_id>/<meetup api key>~
 As you might guess, this sets up a sniper for the group specified by
 the group_id, for the user associated to the <meetup api key>.
-*** \/del\/<group_id>\/<meetup api key>
+*** ~/del/<group_id>/<meetup api key>~
 This endpoint removes the sniper that was created from the above.
-  * \/<group_id>
+  * ~/<group_id>~
 This provides details as to how many snipers exist for this group.
 
 ** The commander
@@ -33,9 +33,9 @@ To use the commander, enter your [[http://www.meetup.com/meetup_api/key/][Meetup
 be presenting with a list of the Meetup groups you are currently apart of.
 Select the ones you want to snipe and press the 'Boom' button.
 
-* Requirements
-** [[http://eventlet.net/][Eventlet]]
-** My fork of [[https://github.com/apgwoz/itty][itty]], the Python micro framework.
-** Python with GDBM. (this is Unix only)
+** Requirements
+*** [[http://eventlet.net/][Eventlet]]
+*** My fork of [[https://github.com/apgwoz/itty][itty]], the Python micro framework.
+*** Python with GDBM. (this is Unix only)
 
 
