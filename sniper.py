@@ -17,7 +17,7 @@ import os
 import urllib
 import urlparse
 
-STREAM_URL = 'http://stream.dev.meetup.com:8100/2/open_events'
+STREAM_URL = 'http://stream.meetup.co/2/open_events'
 
 DBM_FILE = os.path.join(os.path.dirname(__file__), 'sniperdata.gdbm')
 
