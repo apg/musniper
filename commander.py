@@ -14,8 +14,8 @@ JS_ROOT = os.path.join(STATIC_ROOT, 'js')
 
 SNIPERS_NEST = 'http://127.0.0.1:9001/%(op)s/%(group_id)s/%(token)s'
 
-MEETUP_TOKEN_AUTH_URL = "http://api.dev.meetup.com/members/?relation=self&key=%(token)s"
-MEETUP_GROUPS_URL = "http://api.dev.meetup.com/groups/?member_id=%(member_id)s&key=%(token)s"
+MEETUP_TOKEN_AUTH_URL = "http://api.meetup.com/members/?relation=self&key=%(token)s"
+MEETUP_GROUPS_URL = "http://api.meetup.com/groups/?member_id=%(member_id)s&key=%(token)s"
 
 
 TEMPLATE_TOP = """<html>
