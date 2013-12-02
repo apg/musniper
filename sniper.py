@@ -97,7 +97,7 @@ def get_stream(url):
         port = int(port)
     s = socket.socket()
     s.connect((host, port))
-    s.send("""GET %s HTTP/1.0\r\nHost: stream.dev.meetup.com\r\n\r\n""" \
+    s.send("""GET %s HTTP/1.0\r\nHost: stream.meetup.com\r\n\r\n""" \
                % bits[2])
     # read the response
     req = s.makefile('r')
