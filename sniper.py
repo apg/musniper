@@ -17,14 +17,14 @@ import os
 import urllib
 import urlparse
 
-STREAM_URL = 'http://stream.meetup.co/2/open_events'
+STREAM_URL = 'http://stream.meetup.com/2/open_events'
 
 DBM_FILE = os.path.join(os.path.dirname(__file__), 'sniperdata.gdbm')
 
 rsvp_pool = GreenPool()
 
 def rsvp_url(**data):
-    return 'http://api.dev.meetup.com/rsvp?' + \
+    return 'http://api.meetup.com/rsvp?' + \
         urllib.urlencode(data)
 
 
